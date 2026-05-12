@@ -21,6 +21,7 @@ public class Aluno {
     @Column(name = "sexo", length = 1)
     private String sexo;
 
+    private String telefone;
     private String celular;
     private String email;
     private String observacoes;
@@ -91,6 +92,14 @@ public class Aluno {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getCelular() {
