@@ -2,6 +2,7 @@ package dev.matheus.service;
 
 import dev.matheus.dto.AlunoRequest;
 import dev.matheus.dto.AlunoResponse;
+import dev.matheus.exception.RegraNegocioException;
 import dev.matheus.model.Aluno;
 import dev.matheus.repository.AlunoRepository;
 
@@ -20,7 +21,7 @@ public class AlunoService {
 
     public AlunoResponse cadastrar(AlunoRequest request) {
         if (request.email() != null && repository.existsByEmail(request.email())) {
-            throw new RuntimeException("Já existe aluno cadastrado com esse email");
+            throw new RegraNegocioException("Já existe aluno cadastrado com esse email");
         }
         Aluno aluno = request.toEntity();
         Aluno alunoSalvo = repository.save(aluno);
@@ -49,6 +50,6 @@ public class AlunoService {
     }
 
     private Aluno buscarEntidadePorId(Long id) {
-        return repository.findById(id).orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
+        return repository.findById(id).orElseThrow(() -> new RegraNegocioException("Aluno não encontrado"));
     }
 }
