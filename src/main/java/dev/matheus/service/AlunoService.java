@@ -1,11 +1,13 @@
 package dev.matheus.service;
 
+import dev.matheus.dto.AlunoFiltroRequest;
 import dev.matheus.dto.AlunoRequest;
 import dev.matheus.dto.AlunoResponse;
 import dev.matheus.exception.RegraNegocioException;
 import dev.matheus.model.Aluno;
 import dev.matheus.repository.AlunoRepository;
 
+import dev.matheus.specification.AlunoSpecification;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,8 +30,8 @@ public class AlunoService {
         return AlunoResponse.fromEntity(alunoSalvo);
     }
 
-    public Page<AlunoResponse> listar(Pageable pageable) {
-        return repository.findAll(pageable).map(AlunoResponse::fromEntity);
+    public Page<AlunoResponse> listar(AlunoFiltroRequest filtro, Pageable pageable) {
+        return repository.findAll(AlunoSpecification.comFiltro(filtro), pageable).map(AlunoResponse::fromEntity);
     }
 
     public AlunoResponse buscarPorId(Long id) {
