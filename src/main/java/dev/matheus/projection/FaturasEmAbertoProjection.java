@@ -5,7 +5,7 @@ import java.time.LocalDate;
 
 public interface FaturasEmAbertoProjection {
 
-    Long getMatriculasId();
+    Long getMatriculaId();
     String getAlunoNome();
     LocalDate getDataVencimento();
     BigDecimal getValor();
