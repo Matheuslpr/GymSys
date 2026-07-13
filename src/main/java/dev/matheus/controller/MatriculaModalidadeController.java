@@ -1,5 +1,6 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.MatriculaModalidadeControllerDoc;
 import dev.matheus.dto.HistoricoGraduacaoResponse;
 import dev.matheus.dto.MatriculaModalidadeRequest;
 import dev.matheus.dto.MatriculaModalidadeResponse;
@@ -14,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/matriculas-modalidades")
-public class MatriculaModalidadeController {
+public class MatriculaModalidadeController implements MatriculaModalidadeControllerDoc {
 
     private final MatriculaModalidadeService service;
 

@@ -1,5 +1,6 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.FaturaMatriculaControllerDoc;
 import dev.matheus.dto.FaturaMatriculaRequest;
 import dev.matheus.dto.FaturaMatriculaResponse;
 import dev.matheus.service.FaturaMatriculaService;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/faturas-matriculas")
-public class FaturaMatriculaController {
+public class FaturaMatriculaController implements FaturaMatriculaControllerDoc {
 
     private final FaturaMatriculaService service;
 

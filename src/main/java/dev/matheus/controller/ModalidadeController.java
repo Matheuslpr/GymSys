@@ -1,5 +1,6 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.ModalidadeControllerDoc;
 import dev.matheus.dto.ModalidadeRequest;
 import dev.matheus.dto.ModalidadeResponse;
 import dev.matheus.service.ModalidadeService;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/modalidades")
-public class ModalidadeController {
+public class ModalidadeController implements ModalidadeControllerDoc {
 
     private final ModalidadeService service;
 

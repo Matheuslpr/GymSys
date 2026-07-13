@@ -1,5 +1,6 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.GraduacaoControllerDoc;
 import dev.matheus.dto.GraduacaoRequest;
 import dev.matheus.dto.GraduacaoResponse;
 import dev.matheus.service.GraduacaoService;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/graduacoes")
-public class GraduacaoController {
+public class GraduacaoController implements GraduacaoControllerDoc {
 
     private final GraduacaoService service;
 

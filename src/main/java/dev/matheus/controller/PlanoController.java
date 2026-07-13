@@ -1,5 +1,6 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.PlanoControllerDoc;
 import dev.matheus.dto.PlanoRequest;
 import dev.matheus.dto.PlanoResponse;
 import dev.matheus.service.PlanoService;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/planos")
-public class PlanoController {
+public class PlanoController implements PlanoControllerDoc {
 
     private final PlanoService service;
 

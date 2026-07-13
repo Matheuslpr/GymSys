@@ -51,7 +51,7 @@ public record AlunoRequest(
 
         @Size(max = 20, message = "O CEP deve conter no máximo 20 caracteres.")
         String cep
-        ){
+){
 
     public Aluno toEntity(){
         Aluno aluno = new Aluno();
@@ -63,7 +63,6 @@ public record AlunoRequest(
         aluno.setNome(nome);
         aluno.setDataNascimento(dataNascimento);
         aluno.setSexo(sexo);
-        aluno.setNumero(numero);
         aluno.setTelefone(telefone);
         aluno.setCelular(celular);
         aluno.setEmail(email);

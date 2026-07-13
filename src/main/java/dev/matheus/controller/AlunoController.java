@@ -1,10 +1,10 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.AlunoControllerDoc;
 import dev.matheus.dto.AlunoFiltroRequest;
 import dev.matheus.dto.AlunoRequest;
 import dev.matheus.dto.AlunoResponse;
 import dev.matheus.service.AlunoService;
-
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/alunos")
-public class AlunoController {
+public class AlunoController implements AlunoControllerDoc {
 
     private final AlunoService service;
 

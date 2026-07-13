@@ -1,6 +1,7 @@
 package dev.matheus.controller;
 
 
+import dev.matheus.doc.MatriculaControllerDoc;
 import dev.matheus.dto.MatriculaRequest;
 import dev.matheus.dto.MatriculaResponse;
 import dev.matheus.service.MatriculaService;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/matriculas")
-public class MatriculaController {
+public class MatriculaController implements MatriculaControllerDoc {
 
     private final MatriculaService service;
 

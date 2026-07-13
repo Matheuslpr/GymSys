@@ -1,5 +1,6 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.RelatorioAcademiaControllerDoc;
 import dev.matheus.projection.AlunosPorCidadeProjection;
 import dev.matheus.projection.FaturamentoMensalProjection;
 import dev.matheus.projection.FaturasEmAbertoProjection;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/relatorios")
-public class RelatorioAcademiaController {
+public class RelatorioAcademiaController implements RelatorioAcademiaControllerDoc {
     private final RelatorioAcademiaRepository repository;
 
     public RelatorioAcademiaController(RelatorioAcademiaRepository repository) {

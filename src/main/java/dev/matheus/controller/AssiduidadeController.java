@@ -1,5 +1,6 @@
 package dev.matheus.controller;
 
+import dev.matheus.doc.AssiduidadeControllerDoc;
 import dev.matheus.dto.AssiduidadeRequest;
 import dev.matheus.dto.AssiduidadeResponse;
 import dev.matheus.service.AssiduidadeService;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/assiduidades")
-public class AssiduidadeController {
+public class AssiduidadeController implements AssiduidadeControllerDoc {
 
     private final AssiduidadeService service;
 
